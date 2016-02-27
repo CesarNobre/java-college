@@ -1,6 +1,4 @@
 package br.com.fiap.entity;
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,9 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name="T_CLIENTE")
@@ -28,20 +23,6 @@ public class Cliente {
 	@Column(name="NM_EMAIL", nullable=false, length=50)
 	private String email;
 	
-	@Column(name="DT_NASCIMENTO", nullable=true)
-	@Temporal(value=TemporalType.DATE)
-	private Date dataNascimento;
-	
-	
-	@Transient
-	private boolean logado;
-	
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
-	}
 	public String getEmail() {
 		return email;
 	}
@@ -60,11 +41,6 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public boolean isLogado() {
-		return logado;
-	}
-	public void setLogado(boolean logado) {
-		this.logado = logado;
-	}
+	
 	
 }
