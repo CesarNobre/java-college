@@ -3,12 +3,9 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -31,29 +28,11 @@ public class Cliente {
 	@Column(name="NM_EMAIL", nullable=false, length=50)
 	private String email;
 	
-	@Column(name="DT_NASCIMENTO", nullable=false)
+	@Column(name="DT_NASCIMENTO", nullable=true)
 	@Temporal(value=TemporalType.DATE)
 	private Date dataNascimento;
 	
-	@Lob
-	private byte[] foto;
 	
-	@Column(name="IND_SEXO")
-	@Enumerated(EnumType.STRING)
-	private Sexo sexo;
-	
-	public Sexo getSexo() {
-		return sexo;
-	}
-	public void setSexo(Sexo sexo) {
-		this.sexo = sexo;
-	}
-	public byte[] getFoto() {
-		return foto;
-	}
-	public void setFoto(byte[] foto) {
-		this.foto = foto;
-	}
 	@Transient
 	private boolean logado;
 	
