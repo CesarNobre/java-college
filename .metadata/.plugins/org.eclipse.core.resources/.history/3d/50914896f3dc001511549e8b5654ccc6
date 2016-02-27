@@ -21,12 +21,12 @@ public class console {
 		cliente.setEmail("cesarnobrefilho@gmail.com");
 		cliente.setLogado(true);
 		cliente.setDataNascimento(
-				new GregorianCalendar(1996,Calendar.SEPTEMBER, 13));
-		cliente.setSexo(Sexo.MASCULINO);
+				new GregorianCalendar(1996,Calendar.SEPTEMBER,13));
 		
-		entityManager.getTransaction().begin();
+		cliente.setFoto(new byte[255]);
+		cliente.setSexo(Sexo.MASCULINO);
 		entityManager.persist(cliente);
-		entityManager.getTransaction().commit();
+		
 		entityManager.close();
 	}
 

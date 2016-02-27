@@ -22,6 +22,8 @@ public class console {
 		cliente.setLogado(true);
 		cliente.setDataNascimento(
 				new GregorianCalendar(1996,Calendar.SEPTEMBER, 13));
+		
+		cliente.setFoto(new byte[255]);
 		cliente.setSexo(Sexo.MASCULINO);
 		
 		entityManager.getTransaction().begin();

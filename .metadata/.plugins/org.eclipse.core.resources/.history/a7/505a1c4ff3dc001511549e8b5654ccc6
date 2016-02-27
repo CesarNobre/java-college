@@ -1,9 +1,5 @@
 package br.com.fiap.entity;
-
-
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,7 +33,7 @@ public class Cliente {
 	
 	@Column(name="DT_NASCIMENTO", nullable=false)
 	@Temporal(value=TemporalType.DATE)
-	private java.util.Calendar dataNascimento;
+	private Date dataNascimento;
 	
 	@Lob
 	private byte[] foto;
@@ -61,10 +57,10 @@ public class Cliente {
 	@Transient
 	private boolean logado;
 	
-	public Calendar getDataNascimento() {
+	public Date getDataNascimento() {
 		return dataNascimento;
 	}
-	public void setDataNascimento(GregorianCalendar dataNascimento) {
+	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 	public String getEmail() {

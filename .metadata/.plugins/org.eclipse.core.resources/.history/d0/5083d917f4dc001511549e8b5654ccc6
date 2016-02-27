@@ -1,7 +1,6 @@
 package br.com.fiap.entity;
 
 
-import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -61,7 +60,7 @@ public class Cliente {
 	@Transient
 	private boolean logado;
 	
-	public Calendar getDataNascimento() {
+	public GregorianCalendar getDataNascimento() {
 		return dataNascimento;
 	}
 	public void setDataNascimento(GregorianCalendar dataNascimento) {
