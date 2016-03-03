@@ -2,16 +2,39 @@ package br.com.fiap.entity;
 
 import java.util.Calendar;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+
+
+@Entity
+@Table(name="T_CONTA")
+@SequenceGenerator(name="seqConta", sequenceName="SEQ_I_CONTA", allocationSize=1)
 public class Conta {
 	
+	@Id
+	@Column(name="NR_CONTA")
 	private int numero;
 	
+	@Column(name="VL_SALDO")
 	private float saldo;
 	
+	@Column(name="DS_STATUS")
+	@Enumerated(EnumType.STRING)
 	private Status status;
 	
+	@Column(name="NM_TITULAR", length=100)
 	private String nomeTitular;
 	
+	@Temporal(value=TemporalType.DATE)
+	@Column(name="DT_ABERTURA", length=100)
 	private Calendar dataAbertura;
 
 	public int getNumero() {
