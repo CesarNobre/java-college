@@ -1,0 +1,17 @@
+package br.com.fiap.presentation;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+public class console {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory f = Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
+		EntityManager em = f.createEntityManager();
+	}
+	private static void CriarConta(){
+		
+	}
+}

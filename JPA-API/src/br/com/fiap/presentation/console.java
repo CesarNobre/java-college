@@ -1,0 +1,24 @@
+package br.com.fiap.presentation;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import br.com.fiap.entity.Conta;
+import br.com.fiap.entity.Status;
+
+public class console {
+	static EntityManagerFactory f = Persistence.createEntityManagerFactory("CLIENTE_ORACLE");
+	static EntityManager em = f.createEntityManager();
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Conta novaConta = new Conta(123,100,Status.ATIVO,"Cesar");
+		CriarConta(novaConta);
+	}
+	private static void CriarConta(Conta conta){
+		em.getTransaction().begin();
+		em.persist(conta);
+		em.getTransaction().commit();
+		em.close();
+	}
+}

@@ -1,8 +1,6 @@
 package br.com.fiap.entity;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,20 +30,13 @@ public class Conta {
 	@Enumerated(EnumType.STRING)
 	private Status status;
 	
-	@Column(name="NM_TITULAR", length=100,nullable=false)
+	@Column(name="NM_TITULAR", length=100)
 	private String nomeTitular;
 	
 	@Temporal(value=TemporalType.DATE)
 	@Column(name="DT_ABERTURA", length=100)
 	private Calendar dataAbertura;
 
-	public Conta(int numero, float saldo, Status status, String nomeTitular){
-		this.numero = numero;
-		this.saldo = saldo;
-		this.status = status;
-		this.nomeTitular = nomeTitular;
-		this.dataAbertura = new GregorianCalendar(TimeZone.getDefault());
-	}
 	public int getNumero() {
 		return numero;
 	}

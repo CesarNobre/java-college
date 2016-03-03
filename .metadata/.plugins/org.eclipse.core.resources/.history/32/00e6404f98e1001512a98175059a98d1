@@ -1,0 +1,12 @@
+package br.com.fiap.presentation;
+
+import javax.persistence.Persistence;
+
+public class console {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EntityManagerFactory f = Persistence.createEntityManagerFactory("Conta");
+	}
+
+}

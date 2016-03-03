@@ -44,7 +44,7 @@ public class Conta {
 		this.saldo = saldo;
 		this.status = status;
 		this.nomeTitular = nomeTitular;
-		this.dataAbertura = new GregorianCalendar(TimeZone.getDefault());
+		this.dataAbertura = new GregorianCalendar(TimeZone.getDefault()).getTime();
 	}
 	public int getNumero() {
 		return numero;
