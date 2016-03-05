@@ -1,13 +1,12 @@
 package br.com.fiap.entity;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -15,37 +14,29 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 
-
 @Entity
-@Table(name="T_CONTA")
-@SequenceGenerator(name="seqConta", sequenceName="SEQ_I_CONTA", allocationSize=1)
+@Table(name="T_CONTA") //Opcional
+@SequenceGenerator(name="seqConta", sequenceName="SEQ_T_CONTA",allocationSize=1)
 public class Conta {
 	
-	@Id
+	@Id //Decide quem será a primary key
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="seqConta") // faz a criação do Generation  e da Sequence
 	@Column(name="NR_CONTA")
 	private int numero;
 	
-	@Column(name="VL_SALDO", nullable=false)
+	@Column(name="VL_SALDO",nullable=false)
 	private float saldo;
 	
-	@Column(name="DS_STATUS")
-	@Enumerated(EnumType.STRING)
+	@Enumerated(EnumType.STRING) //Salva a "STRING" do Enum no BD
 	private Status status;
 	
-	@Column(name="NM_TITULAR", length=100,nullable=false)
+	@Column(name="NM_TITULAR",nullable=false,length=100)
 	private String nomeTitular;
 	
-	@Temporal(value=TemporalType.DATE)
-	@Column(name="DT_ABERTURA", length=100)
-	private Calendar dataAbertura;
+	@Temporal(TemporalType.DATE) //Armazena somente a data no BD
+	@Column(name="DT_ABERTURA")
+	private Calendar dataCadastro;
 
-	public Conta(int numero, float saldo, Status status, String nomeTitular){
-		this.numero = numero;
-		this.saldo = saldo;
-		this.status = status;
-		this.nomeTitular = nomeTitular;
-		this.dataAbertura = new GregorianCalendar(TimeZone.getDefault());
-	}
 	public int getNumero() {
 		return numero;
 	}
@@ -78,13 +69,12 @@ public class Conta {
 		this.nomeTitular = nomeTitular;
 	}
 
-	public Calendar getDataAbertura() {
-		return dataAbertura;
+	public Calendar getDataCadastro() {
+		return dataCadastro;
 	}
 
-	public void setDataAbertura(Calendar dataAbertura) {
-		this.dataAbertura = dataAbertura;
+	public void setDataCadastro(Calendar dataCadastro) {
+		this.dataCadastro = dataCadastro;
 	}
-	
-	
+
 }
