@@ -1,0 +1,20 @@
+package br.com.fiap.view;
+
+import br.com.fiap.bo.EstoqueBOStub;
+import br.com.fiap.bo.EstoqueBOStub.BuscarProduto;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			EstoqueBOStub ws = new EstoqueBOStub();	
+			BuscarProduto param = new BuscarProduto();
+			
+			ws.buscarProduto(param);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

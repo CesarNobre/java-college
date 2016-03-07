@@ -1,0 +1,17 @@
+package br.com.fiap.view;
+
+import br.com.fiap.bo.EstoqueBOStub;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			EstoqueBOStub ws = new EstoqueBOStub();	
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+	}
+
+}

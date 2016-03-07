@@ -58,3 +58,15 @@
 0:0:0:0:0:0:0:1 - - [07/Mar/2016:20:14:57 -0300] "POST /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 526
 0:0:0:0:0:0:0:1 - - [07/Mar/2016:20:15:08 -0300] "POST /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 526
 0:0:0:0:0:0:0:1 - - [07/Mar/2016:20:15:15 -0300] "POST /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 529
+127.0.0.1 - - [07/Mar/2016:20:28:11 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:11 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:21 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:21 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:21 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:21 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:21 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+127.0.0.1 - - [07/Mar/2016:20:28:23 -0300] "GET /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 5199
+0:0:0:0:0:0:0:1 - - [07/Mar/2016:20:28:40 -0300] "POST /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 529
+127.0.0.1 - - [07/Mar/2016:20:43:47 -0300] "POST /Loja-WS-Provider/services/EstoqueBO.EstoqueBOHttpSoap12Endpoint/ HTTP/1.1" 500 395
+0:0:0:0:0:0:0:1 - - [07/Mar/2016:20:43:53 -0300] "POST /Loja-WS-Provider/services/EstoqueBO?wsdl HTTP/1.1" 200 529
+127.0.0.1 - - [07/Mar/2016:20:44:17 -0300] "POST /Loja-WS-Provider/services/EstoqueBO.EstoqueBOHttpSoap12Endpoint/ HTTP/1.1" 200 527

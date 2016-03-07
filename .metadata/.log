@@ -9148,3 +9148,14 @@ Java Model Exception: Java Model Status [Servers does not exist]
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-03-07 19:59:32.069
 !MESSAGE Servers does not exist
+
+!ENTRY org.tigris.subversion.subclipse.core 4 0 2016-03-07 20:21:33.964
+!MESSAGE Could not auto-share project Exemplo-consumo-ws
+!STACK 1
+org.tigris.subversion.subclipse.core.SVNException: Provided SVN information does not match that on disk for project 'Exemplo-consumo-ws'.
+	at org.tigris.subversion.subclipse.core.resources.SVNWorkspaceRoot.setSharing(SVNWorkspaceRoot.java:206)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.autoconnectSVNProject(SVNTeamProviderType.java:140)
+	at org.tigris.subversion.subclipse.core.SVNTeamProviderType$AutoShareJob.run(SVNTeamProviderType.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.tigris.subversion.subclipse.core 4 4 2016-03-07 20:21:33.965
+!MESSAGE Provided SVN information does not match that on disk for project 'Exemplo-consumo-ws'.

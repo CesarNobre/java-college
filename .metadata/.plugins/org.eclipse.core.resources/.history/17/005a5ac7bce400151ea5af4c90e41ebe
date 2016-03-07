@@ -1,0 +1,12 @@
+package br.com.fiap.view;
+
+import br.com.fiap.bo.EstoqueBOStub;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		EstoqueBOStub estoqueBO = new EstoqueBOStub();
+	}
+
+}

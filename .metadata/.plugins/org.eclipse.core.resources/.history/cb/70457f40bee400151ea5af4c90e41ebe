@@ -1,0 +1,26 @@
+package br.com.fiap.view;
+
+import javax.swing.JOptionPane;
+
+import br.com.fiap.bo.EstoqueBOStub;
+import br.com.fiap.bo.EstoqueBOStub.BuscarProduto;
+import br.com.fiap.bo.EstoqueBOStub.BuscarProdutoResponse;
+
+public class main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try {
+			EstoqueBOStub ws = new EstoqueBOStub();	
+			BuscarProduto param = new BuscarProduto();
+			int codigo = Integer.parseInt(JOptionPane.showInputDialog("Digite um código"));
+			param.setCodigo(codigo);
+			
+			BuscarProdutoResponse response = ws.buscarProduto(param);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}
