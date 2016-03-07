@@ -1,0 +1,18 @@
+package br.com.fiap.bo;
+
+import br.com.fiap.to.ProdutoTO;
+
+public class EstoqueBO {
+	public ProdutoTO buscarProduto(int codigo){
+		ProdutoTO produto;
+		
+		switch (codigo) {
+		case 401:
+			produto = new ProdutoTO(401,"Camisa Branca",15,100);
+			break;
+
+		default:
+			break;
+		}
+	}
+}

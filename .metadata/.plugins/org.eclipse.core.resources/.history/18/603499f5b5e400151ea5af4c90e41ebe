@@ -1,0 +1,23 @@
+package br.com.fiap.to;
+
+public class ProdutoTO {
+	private int codigo;
+	private String tipo;
+	
+	public ProdutoTO(int i, String string, int j, int k) {
+		// TODO Auto-generated constructor stub
+	}
+	public int getCodigo() {
+		return codigo;
+	}
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	
+}
