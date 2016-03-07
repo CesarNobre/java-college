@@ -19,7 +19,10 @@ public class ProdutoTO {
 		this.largura = largura;
 	}
 	public ProdutoTO(int codigo, String tipo, int altura, int largura) {
-		// TODO Auto-generated constructor stub
+		this.codigo = codigo;
+		this.tipo = tipo;
+		this.altura = altura;
+		this.largura = largura;
 	}
 	public int getCodigo() {
 		return codigo;

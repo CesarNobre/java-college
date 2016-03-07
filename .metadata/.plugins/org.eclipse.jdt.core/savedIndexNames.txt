@@ -17,7 +17,6 @@ INDEX VERSION 1.127+C:\Users\rm67702\Documents\java-college\.metadata\.plugins\o
 4160617514.index
 1195258360.index
 1453218678.index
-4237497581.index
 579320009.index
 2398222734.index
 1113092677.index
