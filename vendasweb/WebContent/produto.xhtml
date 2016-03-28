@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Pesquisa de Produtos</title>
+</h:head>
+<h:body>
+	<h1>Pesquisa de Produtos</h1>
+	<h:form method="POST" action="">
+		<h:outputLabel value="Código" for="cod"/>
+		<h:inputText id="cod"/>
+		<h:commandButton action="#{produtoBean.buscar}" value="Pesquisar" />
+	</h:form>
+	<h:outputText value="#{produtoBean.resposta}"/>
+</h:body>
+</html>
