@@ -12,18 +12,16 @@
 <h:body>
 	<h2>Cadastro de Vaga</h2>
 	<h:form>
-	<h:panelGrid>
-	
-	
-		<h:outputLabel value="Nome" for="nome"/>
+	<h:panelGrid columns="2">
+		<h:outputLabel value="#{vagaBean.vaga.nome}" for="nome"/>
 		<h:inputText id="nome"/>
 		<h:outputLabel value="Nivel" for="nivel"/>
 		<h:selectOneMenu id="nivel">
-			
+			<f:selectItems value="#{vagaBean.niveis}" />
 		</h:selectOneMenu>
 		<h:outputLabel value="Linguagem" for="ling"/>
 		<h:selectManyCheckbox id="ling">
-			
+			<f:selectItems value="#{vagaBean.linguagens}"></f:selectItems>
 		</h:selectManyCheckbox>
 		<h:outputLabel value="Disponibilidade para viagens" for ="viagem"/>
 		<h:selectOneRadio id="viagem">
@@ -33,9 +31,9 @@
 		
 		<h:outputLabel value="Descrição" for="desc"/>
 		<h:inputTextarea cols="50" rows="5" id="desc"></h:inputTextarea>
-		<h:selectBooleanCheckbox id="def"/>
+		<h:selectBooleanCheckbox value="def"/>
 		<h:outputLabel value="Necessidades Especiais" for="def"/>
-		
+					
 		<h:commandButton value="Cadastrar"/>
 	</h:panelGrid>
 	</h:form>
